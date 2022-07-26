@@ -19,7 +19,6 @@
             </Grid.RowDefinitions>
 
             <Grid Grid.Row="0">
-                <Image Source="Images/Static-X_-_Wisconsin_Death_Trip.jpg"/>
             </Grid>
 
             <Grid Grid.Row="1">
