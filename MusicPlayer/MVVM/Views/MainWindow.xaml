@@ -5,56 +5,129 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:vm="clr-namespace:MusicPlayer.MVVM.Views"
         xmlns:local="clr-namespace:MusicPlayer.MVVM.Views"
+        xmlns:font="http://schemas.fontawesome.com/icons/"
         mc:Ignorable="d"
         WindowStyle="None"
         ResizeMode="NoResize"
         Background="Transparent"
         AllowsTransparency="True"
-        Height="350" Width="270">
-    <Border MouseDown="Border_MouseDown" Background="#939597">
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="200"/>
-                <RowDefinition />
-            </Grid.RowDefinitions>
-
-            <Grid Grid.Row="0">
-            </Grid>
-
-            <Grid Grid.Row="1">
+        Height="350" Width="260">
+    <Grid>
+        <Border MouseDown="Border_MouseDown" Background="Transparent">
+            <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="200"/>
                     <RowDefinition />
                 </Grid.RowDefinitions>
 
+                <Rectangle RadiusX="8" RadiusY="8" Grid.RowSpan="2">
+                    <Rectangle.Fill >
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                            <GradientStop Color="Gray" Offset="0.0"></GradientStop>
+                            <GradientStop Color="#939597" Offset="0.15"></GradientStop>
+                            <GradientStop Color="Silver" Offset="0.4"></GradientStop>
+                            <GradientStop Color="White" Offset="0.65"></GradientStop>
+                            <GradientStop Color="#939597" Offset="1"></GradientStop>
+                        </LinearGradientBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+
                 <Grid Grid.Row="0">
-                    <ProgressBar ></ProgressBar>
-                </Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="13*"/>
+                        <RowDefinition Height="4*"/>
+                    </Grid.RowDefinitions>
 
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="25"/>
+                            <ColumnDefinition Width="35"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Height="20" Grid.Column="0">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Height="20" Source="/Images/Icon/icons8-menu-50.png" />
+                            </StackPanel>
+                        </Button>
+
+                        <Button Height="20" Grid.Column="2">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Height="15" Source="/Images/Icon/icons8-collapse-arrow-48.png" />
+                            </StackPanel>
+                        </Button>
+
+                        <Button Height="20" Grid.Column="3">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Height="15" Source="/Images/Icon/icons8-close-30.png" />
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+
+                    <StackPanel Grid.Row="1" Orientation="Horizontal">
+                        <Image Height="100" Width="100" Margin="80,0,0,0" Source="/Images/Icon/icons8-musical-100.png" />
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="2">
+                        <TextBlock TextAlignment="Center" Text="Music"/>
+                    </StackPanel>
+                </Grid>
                 <Grid Grid.Row="1">
-                    <Grid.ColumnDefinitions >
-                        <ColumnDefinition Width="100"/>
-                        <ColumnDefinition Width="100"/>
-                        <ColumnDefinition />
-                    </Grid.ColumnDefinitions>
-                    <Button Grid.Column="0" Content="назад" ></Button>
-                    <Button Grid.Column="1" Content="стоп"></Button>
-                    <Button Grid.Column="2" Content="Вперед"></Button>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
 
-                </Grid>
+                    <Grid Grid.Row="0">
+                        <ProgressBar ></ProgressBar>
+                    </Grid>
 
-                <Grid Grid.Row="2">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="150"/>
-                        <ColumnDefinition />
-                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions >
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="0">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Height="35" Source="/Images/Icon/icons8-skip-to-start-50.png" />
+                            </StackPanel>
+                        </Button>
+                        <Button Grid.Column="1">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Height="35" Source="/Images/Icon/icons8-play-50.png" />
+                            </StackPanel>
+                        </Button>
+                        <Button Grid.Column="2">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Height="35" Source="/Images/Icon/icons8-end-50.png" />
+                            </StackPanel>
+                        </Button>
 
-                    <Button Grid.Column="0">Text</Button>
-                    <Button Grid.Column="1" >Random</Button>
+                    </Grid>
 
+                    <Grid Grid.Row="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+
+                        <Button Grid.Column="0">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Height="20" Source="/Images/Icon/icons8-repeat-50.png" />
+                            </StackPanel>
+                        </Button>
+                        <Button Grid.Column="1" >
+                            <StackPanel  Orientation="Horizontal">
+                                <Image Height="20" Source="/Images/Icon/icons8-heart-50.png" />
+                            </StackPanel>
+                        </Button>
+
+                    </Grid>
                 </Grid>
             </Grid>
-        </Grid>
-    </Border>
+        </Border>
+    </Grid>
 </Window>
