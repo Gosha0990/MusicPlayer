@@ -25,7 +25,9 @@
 
   <ItemGroup>
     <Folder Include="MVVM\Models\" />
-    <Folder Include="MVVM\ViewsModels\" />
+    <Folder Include="Data\" />
+    <Folder Include="Services\" />
+    <Folder Include="Infrastructure\" />
   </ItemGroup>
 
   <ItemGroup>
