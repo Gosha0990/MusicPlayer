@@ -8,13 +8,70 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\Icon\icons8-close-30.png" />
+    <None Remove="Images\Icon\icons8-collapse-arrow-48.png" />
+    <None Remove="Images\Icon\icons8-end-50.png" />
+    <None Remove="Images\Icon\icons8-fast-forward-50.png" />
+    <None Remove="Images\Icon\icons8-heart-50.png" />
+    <None Remove="Images\Icon\icons8-menu-50.png" />
+    <None Remove="Images\Icon\icons8-musical-100.png" />
+    <None Remove="Images\Icon\icons8-musical-90.png" />
+    <None Remove="Images\Icon\icons8-pause-50.png" />
+    <None Remove="Images\Icon\icons8-play-50.png" />
+    <None Remove="Images\Icon\icons8-previous-50.png" />
+    <None Remove="Images\Icon\icons8-repeat-50.png" />
+    <None Remove="Images\Icon\icons8-skip-to-start-50.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="MVVM\Models\" />
     <Folder Include="MVVM\ViewsModels\" />
-	  <Folder Include="Images\" />
   </ItemGroup>
 
   <ItemGroup>
     <Page Include="App.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Icon\icons8-close-30.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Icon\icons8-collapse-arrow-48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Icon\icons8-end-50.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Icon\icons8-fast-forward-50.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Icon\icons8-heart-50.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Icon\icons8-menu-50.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Icon\icons8-musical-100.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Icon\icons8-musical-90.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Icon\icons8-pause-50.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Icon\icons8-play-50.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Icon\icons8-previous-50.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Icon\icons8-repeat-50.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Icon\icons8-skip-to-start-50.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>
