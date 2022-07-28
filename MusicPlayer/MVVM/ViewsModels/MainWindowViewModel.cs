@@ -1,9 +1,9 @@
-﻿using MusicPlayer.MVVM.ViewsModels.Base;
+﻿using MusicPlayer.Infrastructure.Commands;
+using MusicPlayer.MVVM.ViewsModels.Base;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Input;
 
 namespace MusicPlayer.MVVM.ViewsModels
 {
@@ -29,7 +29,23 @@ namespace MusicPlayer.MVVM.ViewsModels
         }
         #endregion
 
+        public ICommand CloseApplicationCommand { get; }
+        private void OnCloseApplicationCommandExecute(object p)
+        {
+            Application.Current.Shutdown();
+        }
+        private bool CanCloseApplicationCommandExecute(object p)
+        {
+            return true;
+        }
 
+
+
+        public MainWindowViewModel()
+        {
+            CloseApplicationCommand = new LambdaCommand(OnCloseApplicationCommandExecute, CanCloseApplicationCommandExecute);
+            
+        }
 
     }
 }

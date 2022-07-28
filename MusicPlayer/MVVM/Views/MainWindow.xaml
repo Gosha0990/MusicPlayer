@@ -61,7 +61,7 @@
                             </StackPanel>
                         </Button>
 
-                        <Button Height="20" Grid.Column="3">
+                        <Button Height="20" Command="{Binding CloseApplicationCommand}" Grid.Column="3">
                             <StackPanel Orientation="Horizontal">
                                 <Image Height="15" Source="/Images/Icon/icons8-close-30.png" />
                             </StackPanel>
