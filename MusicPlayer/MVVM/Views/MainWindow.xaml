@@ -16,7 +16,7 @@
         <vm:MainWindowViewModel/>
     </Window.DataContext>
     <Grid>
-        <Border MouseDown="Border_MouseDown" Background="Transparent">
+        <Border x:Name="Bord" MouseDown="Border_MouseDown" Background="Transparent">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="200"/>
@@ -49,13 +49,13 @@
                             <ColumnDefinition Width="25"/>
                             <ColumnDefinition Width="35"/>
                         </Grid.ColumnDefinitions>
-                        <Button Height="20" Grid.Column="0">
+                        <Button Command="{Binding OpenBigMainWindowCommand}" Height="20" Grid.Column="0">
                             <StackPanel Orientation="Horizontal">
                                 <Image Height="20" Source="/Images/Icon/icons8-menu-50.png" />
                             </StackPanel>
                         </Button>
 
-                        <Button Height="20" Grid.Column="2">
+                        <Button Command="{Binding CollapseApplicationCommand}" Height="20" Grid.Column="2">
                             <StackPanel Orientation="Horizontal">
                                 <Image Height="15" Source="/Images/Icon/icons8-collapse-arrow-48.png" />
                             </StackPanel>
@@ -98,12 +98,19 @@
                                 <Image Height="35" Source="/Images/Icon/icons8-skip-to-start-50.png" />
                             </StackPanel>
                         </Button>
-                        <Button Grid.Column="1">
+                        <Button x:Name="Play" x:FieldModifier="public" Command="{Binding PlayMusicCommand}" Grid.Column="1">
                             <StackPanel Orientation="Horizontal">
                                 <Image Height="35" Source="/Images/Icon/icons8-play-50.png" />
                             </StackPanel>
                         </Button>
-                        <Button Grid.Column="2">
+
+                        <Button x:Name="Pause" Visibility="Collapsed" Command="{Binding PlayMusicCommand}" Grid.Column="1">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Height="35" Source="/Images/Icon/icons8-pause-50.png" />
+                            </StackPanel>
+                        </Button>
+
+                        <Button  Grid.Column="2">
                             <StackPanel Orientation="Horizontal">
                                 <Image Height="35" Source="/Images/Icon/icons8-end-50.png" />
                             </StackPanel>
