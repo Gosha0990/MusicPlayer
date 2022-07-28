@@ -3,15 +3,18 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:vm="clr-namespace:MusicPlayer.MVVM.Views"
         xmlns:local="clr-namespace:MusicPlayer.MVVM.Views"
         xmlns:font="http://schemas.fontawesome.com/icons/"
+        xmlns:vm="clr-namespace:MusicPlayer.MVVM.ViewsModels"
         mc:Ignorable="d"
         WindowStyle="None"
         ResizeMode="NoResize"
         Background="Transparent"
         AllowsTransparency="True"
         Height="350" Width="260">
+    <Window.DataContext>
+        <vm:MainWindowViewModel/>
+    </Window.DataContext>
     <Grid>
         <Border MouseDown="Border_MouseDown" Background="Transparent">
             <Grid>
@@ -58,7 +61,7 @@
                             </StackPanel>
                         </Button>
 
-                        <Button Height="20" Grid.Column="3">
+                        <Button Height="20" Command="{Binding CloseApplicationCommand}" Grid.Column="3">
                             <StackPanel Orientation="Horizontal">
                                 <Image Height="15" Source="/Images/Icon/icons8-close-30.png" />
                             </StackPanel>
@@ -70,7 +73,7 @@
                     </StackPanel>
 
                     <StackPanel Grid.Row="2">
-                        <TextBlock TextAlignment="Center" Text="Music"/>
+                        <TextBlock TextAlignment="Center" Text="{Binding Path = NameTrack}"/>
                     </StackPanel>
                 </Grid>
                 <Grid Grid.Row="1">

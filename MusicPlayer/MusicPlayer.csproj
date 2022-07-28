@@ -27,7 +27,6 @@
     <Folder Include="MVVM\Models\" />
     <Folder Include="Data\" />
     <Folder Include="Services\" />
-    <Folder Include="Infrastructure\" />
   </ItemGroup>
 
   <ItemGroup>
