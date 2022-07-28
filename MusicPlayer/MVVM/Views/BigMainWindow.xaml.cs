@@ -17,9 +17,9 @@ namespace MusicPlayer.MVVM.Views
     /// <summary>
     /// Логика взаимодействия для Window1.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class BigMainWindow : Window
     {
-        public Window1()
+        public BigMainWindow()
         {
             InitializeComponent();
         }
